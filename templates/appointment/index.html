@@ -1,0 +1,18 @@
+<!-- templates/appointments/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}Appointments{% endblock %}
+
+{% block content %}
+<h1>Appointments</h1>
+<!-- Check if there are appointments in the context -->
+{% if appointments %}
+<ul>
+    <!-- Iterate over the list of appointments -->
+    {% for appointment in appointments %}
+        <li>{{ appointment }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No appointments available.</p>
+{% endif %}{% endblock %}
